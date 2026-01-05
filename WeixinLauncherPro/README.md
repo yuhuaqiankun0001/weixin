@@ -10,12 +10,25 @@
 
 ---
 
-## 运行（开发模式）
-建议使用国内源：
+## 环境与依赖
+- 平台：**Windows**（依赖 win32 API）
+- 语言：Python 3.9+，需包含 `tkinter`
+- 依赖：`pywin32`、`psutil`。建议使用国内源安装：
+
 ```powershell
 python -m pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
-python app.py
 ```
+
+## 运行（开发模式）
+1. 按上述命令安装依赖。
+2. 运行主程序：
+
+   ```powershell
+   python app.py
+   ```
+
+   - 若依赖缺失或不是在 Windows 上启动，程序会弹出提示窗口并退出。
+   - 首次启动会弹出“首次定位向导”，按步骤选择 `WeiXin.exe`、扫描微信窗口并保存基准位置后进入主界面。
 
 ---
 
