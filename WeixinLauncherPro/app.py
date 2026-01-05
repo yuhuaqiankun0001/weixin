@@ -2,21 +2,26 @@ import importlib.util
 import sys
 import tkinter as tk
 from tkinter import messagebox
+main
 
 REQUIRED_MODULES = ["psutil", "win32gui", "win32con", "win32process"]
 
 
 def _show_error(msg: str) -> None:
     try:
+ main
         root = tk.Tk()
         root.withdraw()
         messagebox.showerror("启动失败", msg)
         root.destroy()
     except Exception:
+
+main
         print(msg, file=sys.stderr)
 
 
 def _environment_ready() -> bool:
+main
     if sys.platform != "win32":
         _show_error("本工具需在 Windows 上运行（依赖 win32 API）。")
         return False
